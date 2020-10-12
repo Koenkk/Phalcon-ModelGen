@@ -9,8 +9,8 @@ Using ModelGen, we can generate the boilerplate code based on a minimal model sp
 Models will be stored as PHP files on disk. No magic methods are used, so expect a small performance advantage over traditional models. Models do not depend on any runtime.
 
 ## Requirements
-* PHP 7.0 or later.
-* Phalcon Framework 3.0 or later.
+* PHP 7.2 or later.
+* Phalcon Framework 4.0 or later.
 
 ## Installation
 Install this dependency using `composer require basilfx/phalcon-modelgen`.
