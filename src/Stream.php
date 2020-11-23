@@ -85,4 +85,18 @@ class Stream
     {
         return feof($this->context);
     }
+
+    public function stream_set_option(int $option, int $arg1, int $arg2)
+    {
+        switch ($option) {
+            case STREAM_OPTION_BLOCKING:
+                return stream_set_blocking($this->context, $arg1);
+            case STREAM_OPTION_READ_TIMEOUT:
+                return stream_set_timeout($this->context, $arg1, $arg2);
+            case STREAM_OPTION_WRITE_BUFFER:
+                return stream_set_write_buffer($this->context, $arg2);
+            default:
+                return false;
+        }
+    }
 }
